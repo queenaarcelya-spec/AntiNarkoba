@@ -3,7 +3,6 @@
    TEMA MAROON + CREAM
 ===================================== */
 
-/* WARNA WEBSITE */
 :root {
     --maroon: #641f32;
     --maroon-dark: #421321;
@@ -16,6 +15,7 @@
 }
 
 /* PENGATURAN DASAR */
+
 * {
     margin: 0;
     padding: 0;
@@ -24,6 +24,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -36,7 +37,6 @@ body {
 
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
-    color: var(--maroon);
     font-weight: bold;
 }
 
@@ -49,7 +49,7 @@ img {
 }
 
 /* =====================================
-   NAVBAR
+   1. NAVBAR
 ===================================== */
 
 .navbar {
@@ -59,7 +59,7 @@ img {
 
 .navbar-brand {
     color: var(--white) !important;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -70,7 +70,7 @@ img {
 
 .navbar-nav .nav-link {
     color: var(--white) !important;
-    margin: 0 8px;
+    margin: 0 7px;
     font-weight: 600;
     transition: 0.3s;
 }
@@ -88,7 +88,7 @@ img {
 }
 
 /* =====================================
-   HERO / BERANDA
+   2. HERO / BERANDA
 ===================================== */
 
 .hero-section {
@@ -104,14 +104,23 @@ img {
     padding: 90px 0;
 }
 
+.hero-label {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
 .hero-section h1 {
     color: var(--white);
     font-size: 48px;
+    line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .hero-section h1 span {
     color: var(--gold);
+    display: block;
 }
 
 .hero-section p {
@@ -120,7 +129,7 @@ img {
     margin-bottom: 25px;
 }
 
-.hero-section .btn {
+.btn-gold {
     background-color: var(--gold);
     color: var(--maroon-dark);
     border: none;
@@ -129,9 +138,25 @@ img {
     border-radius: 6px;
 }
 
-.hero-section .btn:hover {
+.btn-gold:hover {
     background-color: var(--white);
     color: var(--maroon);
+}
+
+.hero-message {
+    border: 2px solid var(--gold);
+    padding: 35px 25px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.05);
+}
+
+.hero-message h2 {
+    color: var(--gold);
+    font-size: 30px;
+}
+
+.hero-message p {
+    margin: 15px 0 0;
 }
 
 /* =====================================
@@ -144,6 +169,7 @@ img {
 }
 
 .section-title h2 {
+    color: var(--maroon);
     font-size: 36px;
     margin-bottom: 12px;
 }
@@ -153,7 +179,7 @@ img {
 }
 
 /* =====================================
-   TENTANG KAMI
+   3. TENTANG KAMI
 ===================================== */
 
 .about-section {
@@ -175,45 +201,73 @@ img {
     margin-bottom: 25px;
 }
 
-/* FOTO PROFIL PERSEGI PANJANG VERTIKAL */
+/* FOTO WAJIB PERSEGI PANJANG VERTIKAL */
 
 .profile-photo {
-    width: 220px;
-    height: 300px;
-    margin: 25px auto;
+    width: 220px !important;
+    height: 300px !important;
+    margin: 25px auto !important;
     overflow: hidden;
     border: 5px solid var(--gold);
-    border-radius: 10px;
+    border-radius: 0 !important;
+    display: block;
     background-color: var(--cream);
 }
 
 .profile-photo img {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: cover;
     object-position: center;
+    border-radius: 0 !important;
     display: block;
 }
 
 .profile-card h2 {
+    color: var(--maroon);
     font-size: 34px;
     margin: 25px 0 15px;
 }
 
-.profile-card p {
+.profile-description {
     font-size: 17px;
     line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
 }
 
-.profile-card .school-info {
+.member-list {
+    max-width: 450px;
+    margin: 30px auto 0;
+    padding: 25px;
+    background-color: var(--cream);
+    border-left: 4px solid var(--gold);
+    text-align: left;
+}
+
+.member-list h3 {
+    color: var(--maroon);
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 24px;
+}
+
+.member-list p {
+    color: var(--maroon);
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.class-info {
+    text-align: center;
     color: var(--maroon);
     font-weight: bold;
     letter-spacing: 2px;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 /* =====================================
-   VISI DAN MISI
+   4. VISI DAN MISI
 ===================================== */
 
 .vision-section {
@@ -244,7 +298,7 @@ img {
 }
 
 /* =====================================
-   PROGRAM / KEGIATAN
+   5. PROGRAM
 ===================================== */
 
 .program-section {
@@ -256,7 +310,7 @@ img {
     border: none;
     border-bottom: 4px solid var(--gold);
     height: 100%;
-    padding: 25px;
+    padding: 28px 22px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.06);
     transition: 0.3s;
@@ -266,17 +320,26 @@ img {
     transform: translateY(-7px);
 }
 
+.program-number {
+    color: var(--gold);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
 .program-card h4 {
-    margin: 15px 0;
+    color: var(--maroon);
+    margin: 12px 0;
     font-size: 22px;
 }
 
 .program-card p {
     color: var(--text);
+    margin-bottom: 0;
 }
 
 /* =====================================
-   GALERI
+   6. GALERI
 ===================================== */
 
 .gallery-section {
@@ -288,11 +351,36 @@ img {
     margin: auto;
 }
 
-.carousel-item img {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-    border-radius: 10px;
+.gallery-slide {
+    min-height: 300px;
+    background: linear-gradient(
+        135deg,
+        var(--maroon-dark),
+        var(--maroon)
+    );
+    color: var(--white);
+    padding: 65px 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery-slide span {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.gallery-slide h3 {
+    color: var(--white);
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.gallery-slide p {
+    color: #f4e9e9;
 }
 
 .carousel-control-prev-icon,
@@ -303,7 +391,7 @@ img {
 }
 
 /* =====================================
-   KONTAK
+   7. KONTAK
 ===================================== */
 
 .contact-section {
@@ -333,7 +421,7 @@ img {
     box-shadow: 0 0 0 0.2rem rgba(198,155,85,0.2);
 }
 
-.contact-section .btn {
+.btn-maroon {
     background-color: var(--maroon);
     color: var(--white);
     border: none;
@@ -341,8 +429,9 @@ img {
     font-weight: bold;
 }
 
-.contact-section .btn:hover {
+.btn-maroon:hover {
     background-color: var(--maroon-dark);
+    color: var(--white);
 }
 
 /* =====================================
@@ -362,7 +451,7 @@ img {
 }
 
 .site-footer p {
-    color: #eee4d7;
+    color: var(--cream-dark);
     margin-bottom: 5px;
 }
 
@@ -371,7 +460,6 @@ img {
 ===================================== */
 
 @media (max-width: 991px) {
-
     .hero-section {
         text-align: center;
         padding: 70px 0;
@@ -379,6 +467,10 @@ img {
 
     .hero-section h1 {
         font-size: 40px;
+    }
+
+    .hero-side {
+        margin-top: 30px;
     }
 
     .navbar-collapse {
@@ -395,7 +487,6 @@ img {
 ===================================== */
 
 @media (max-width: 767px) {
-
     section {
         padding: 60px 0;
     }
@@ -422,15 +513,20 @@ img {
     }
 
     .profile-photo {
-        width: 200px;
-        height: 280px;
+        width: 200px !important;
+        height: 280px !important;
+        border-radius: 0 !important;
+    }
+
+    .profile-photo img {
+        border-radius: 0 !important;
     }
 
     .profile-card h2 {
         font-size: 27px;
     }
 
-    .profile-card p {
+    .profile-description {
         font-size: 15px;
     }
 
@@ -439,11 +535,16 @@ img {
         margin-bottom: 15px;
     }
 
-    .carousel-item img {
-        height: 250px;
+    .gallery-slide {
+        min-height: 250px;
+        padding: 45px 25px;
+    }
+
+    .gallery-slide h3 {
+        font-size: 25px;
     }
 
     .contact-box {
         padding: 25px 18px;
     }
-  }
+   }
