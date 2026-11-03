@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tes Foto</title>
+</head>
+<body>
+    <h2>Tes Foto Saya</h2>
+    <img src="IMG-20261103-WA0012.jpg" width="200">
+</body>
+</html>
