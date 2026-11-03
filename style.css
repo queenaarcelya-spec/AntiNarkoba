@@ -1,574 +1,449 @@
+/* =====================================
+   GENERASI BERSIH
+   TEMA MAROON + CREAM
+===================================== */
+
+/* WARNA WEBSITE */
 :root {
-  --maroon: #641f32;
-  --maroon-dark: #421321;
-  --maroon-light: #85384c;
-  --cream: #f8f3eb;
-  --cream-dark: #eee4d7;
-  --gold: #c69b55;
-  --text: #392d2b;
-  --muted: #756966;
+    --maroon: #641f32;
+    --maroon-dark: #421321;
+    --maroon-light: #85384c;
+    --cream: #f8f3eb;
+    --cream-dark: #eee4d7;
+    --gold: #c69b55;
+    --white: #ffffff;
+    --text: #55504d;
 }
 
+/* PENGATURAN DASAR */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
-  color: var(--text);
-  background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--maroon);
+    font-weight: bold;
 }
 
-/* 1. NAVBAR */
+section {
+    padding: 80px 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+
 .navbar {
-  background: var(--maroon-dark);
-  padding: 17px 0;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    background-color: var(--maroon-dark);
+    padding: 18px 0;
 }
 
 .navbar-brand {
-  color: var(--cream) !important;
-  font-size: 17px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
+    color: var(--white) !important;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .navbar-brand span {
-  color: var(--gold);
+    color: var(--gold);
 }
 
-.nav-link {
-  color: #f4e9df !important;
-  font-size: 13px;
-  font-weight: 600;
-  margin-left: 14px;
-  transition: 0.3s;
+.navbar-nav .nav-link {
+    color: var(--white) !important;
+    margin: 0 8px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.nav-link:hover {
-  color: var(--gold) !important;
+.navbar-nav .nav-link:hover {
+    color: var(--gold) !important;
 }
 
 .navbar-toggler {
-  border-color: rgba(255,255,255,0.5);
+    border: 1px solid var(--gold);
 }
 
 .navbar-toggler:focus {
-  box-shadow: none;
+    box-shadow: none;
 }
 
-/* 2. HERO */
+/* =====================================
+   HERO / BERANDA
+===================================== */
+
 .hero-section {
-  padding: 145px 0 85px;
-  min-height: 470px;
-  background: linear-gradient(120deg, var(--maroon-dark), var(--maroon));
-  color: white;
+    background: linear-gradient(
+        135deg,
+        var(--maroon-dark),
+        var(--maroon)
+    );
+    color: var(--white);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 90px 0;
 }
 
-.hero-label {
-  color: var(--gold);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  margin-bottom: 18px;
+.hero-section h1 {
+    color: var(--white);
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.hero-text h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(35px, 4vw, 49px);
-  line-height: 1.2;
-  margin-bottom: 20px;
+.hero-section h1 span {
+    color: var(--gold);
 }
 
-.hero-description {
-  max-width: 480px;
-  color: #eadbd6;
-  font-size: 14px;
-  line-height: 1.9;
+.hero-section p {
+    color: #f4e9e9;
+    font-size: 17px;
+    margin-bottom: 25px;
 }
 
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 27px;
+.hero-section .btn {
+    background-color: var(--gold);
+    color: var(--maroon-dark);
+    border: none;
+    padding: 12px 28px;
+    font-weight: bold;
+    border-radius: 6px;
 }
 
-.btn-light-custom {
-  background: var(--cream);
-  color: var(--maroon-dark);
-  padding: 12px 22px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 800;
+.hero-section .btn:hover {
+    background-color: var(--white);
+    color: var(--maroon);
 }
 
-.btn-light-custom:hover {
-  background: var(--gold);
-  color: var(--maroon-dark);
-}
-
-.btn-outline-custom {
-  color: white;
-  border: 1px solid rgba(255,255,255,0.7);
-  padding: 12px 22px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.btn-outline-custom:hover {
-  background: white;
-  color: var(--maroon-dark);
-}
-
-/* KARTU SLOGAN */
-.slogan-card {
-  min-height: 275px;
-  max-width: 470px;
-  margin-left: auto;
-  background: var(--cream);
-  color: var(--maroon-dark);
-  border: 5px solid rgba(198,155,85,0.65);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 30px;
-}
-
-.slogan-small {
-  color: #98713b;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 3px;
-}
-
-.slogan-symbol {
-  color: var(--gold);
-  font-size: 35px;
-  margin: 10px 0 3px;
-}
-
-.slogan-card h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 30px;
-  line-height: 1.2;
-}
-
-.slogan-card p {
-  color: var(--muted);
-  font-size: 12px;
-  margin: 12px 0 20px;
-}
-
-.slogan-bottom {
-  color: var(--maroon);
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-}
-
-/* SECTION UMUM */
-.section-padding {
-  padding: 75px 0;
-}
-
-.section-heading {
-  text-align: center;
-  color: var(--maroon);
-  font-family: 'Playfair Display', serif;
-  font-size: 27px;
-  font-weight: 800;
-  margin-bottom: 28px;
-}
-
-.section-intro {
-  margin-bottom: 38px;
-}
-
-.section-label {
-  color: #a17a43;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-}
+/* =====================================
+   JUDUL SECTION
+===================================== */
 
 .section-title {
-  color: var(--maroon-dark);
-  font-family: 'Playfair Display', serif;
-  font-size: 35px;
-  font-weight: 800;
-  margin-bottom: 12px;
+    text-align: center;
+    margin-bottom: 45px;
 }
 
-.section-intro > p:last-child {
-  color: var(--muted);
-  font-size: 13px;
+.section-title h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
 }
 
-/* 3. TENTANG KAMI */
+.section-title p {
+    color: var(--text);
+}
+
+/* =====================================
+   TENTANG KAMI
+===================================== */
+
 .about-section {
-  background: var(--cream);
+    background-color: var(--cream);
 }
 
-.about-card {
-  height: 100%;
-  min-height: 250px;
-  background: white;
-  border: 1px solid #e3d8cd;
-  border-top: 4px solid var(--maroon);
-  padding: 30px;
-  box-shadow: 0 5px 18px rgba(66,19,33,0.05);
-}
-
-.card-label {
-  color: #a17a43;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-/* FOTO SAYA */
 .profile-card {
-  text-align: center;
+    background-color: var(--white);
+    border-top: 6px solid var(--maroon);
+    padding: 45px 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
 }
+
+.profile-label {
+    color: #9b895e;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+/* FOTO PROFIL PERSEGI PANJANG VERTIKAL */
 
 .profile-photo {
-  width: 150px;
-  height: 150px;
-  margin: 25px auto;
-  border: 4px solid var(--gold);
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--cream-dark);
+    width: 220px;
+    height: 300px;
+    margin: 25px auto;
+    overflow: hidden;
+    border: 5px solid var(--gold);
+    border-radius: 10px;
+    background-color: var(--cream);
 }
 
 .profile-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
-.profile-school {
-  color: var(--maroon) !important;
-  font-size: 11px !important;
-  font-weight: 800;
-  letter-spacing: 1px;
+.profile-card h2 {
+    font-size: 34px;
+    margin: 25px 0 15px;
 }
 
-.about-card h3 {
-  font-family: 'Playfair Display', serif;
-  color: var(--maroon);
-  font-size: 25px;
-  margin: 15px 0;
+.profile-card p {
+    font-size: 17px;
+    line-height: 1.8;
 }
 
-.about-card p,
-.about-card li {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.8;
+.profile-card .school-info {
+    color: var(--maroon);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 25px;
 }
 
-.about-card h4 {
-  color: var(--maroon);
-  font-size: 15px;
-  font-weight: 800;
-  margin-top: 15px;
+/* =====================================
+   VISI DAN MISI
+===================================== */
+
+.vision-section {
+    background-color: var(--cream-dark);
 }
 
-.about-card ul {
-  padding-left: 19px;
-  margin-bottom: 0;
+.vision-box,
+.mission-box {
+    background-color: var(--white);
+    padding: 30px;
+    height: 100%;
+    border-left: 5px solid var(--maroon);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.about-card li {
-  padding-bottom: 5px;
+.vision-box h3,
+.mission-box h3 {
+    color: var(--maroon);
+    margin-bottom: 18px;
 }
 
-/* 4. PROGRAM */
+.mission-box ul {
+    padding-left: 20px;
+}
+
+.mission-box li {
+    margin-bottom: 10px;
+}
+
+/* =====================================
+   PROGRAM / KEGIATAN
+===================================== */
+
 .program-section {
-  background: var(--cream-dark);
+    background-color: var(--cream);
 }
 
 .program-card {
-  background: white;
-  min-height: 245px;
-  height: 100%;
-  padding: 25px;
-  border: 1px solid #e7dcd1;
-  border-bottom: 4px solid var(--maroon);
-  position: relative;
-  transition: 0.3s;
+    background-color: var(--white);
+    border: none;
+    border-bottom: 4px solid var(--gold);
+    height: 100%;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    transition: 0.3s;
 }
 
 .program-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(66,19,33,0.1);
+    transform: translateY(-7px);
 }
 
-.program-number {
-  position: absolute;
-  top: 18px;
-  right: 20px;
-  color: #d9c7b5;
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  font-weight: 800;
-}
-
-.program-icon {
-  width: 43px;
-  height: 43px;
-  background: var(--maroon);
-  color: var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 23px;
-  margin-bottom: 20px;
-}
-
-.program-card h3 {
-  color: var(--maroon);
-  font-family: 'Playfair Display', serif;
-  font-size: 19px;
-  margin-bottom: 10px;
+.program-card h4 {
+    margin: 15px 0;
+    font-size: 22px;
 }
 
 .program-card p {
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.8;
-  margin-bottom: 0;
+    color: var(--text);
 }
 
-/* 5. GALERI */
+/* =====================================
+   GALERI
+===================================== */
+
 .gallery-section {
-  background: #fffdf9;
+    background-color: var(--cream-dark);
 }
 
-.campaign-slide {
-  min-height: 300px;
-  padding: 45px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+.carousel {
+    max-width: 850px;
+    margin: auto;
 }
 
-.campaign-slide > span {
-  color: var(--gold);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  margin-bottom: 18px;
+.carousel-item img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.campaign-slide h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(27px, 4vw, 40px);
-  line-height: 1.25;
-  margin-bottom: 13px;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--maroon);
+    border-radius: 50%;
+    padding: 20px;
 }
 
-.campaign-slide p {
-  color: #f0e1dd;
-  font-size: 13px;
-  margin: 0;
-}
+/* =====================================
+   KONTAK
+===================================== */
 
-.slide-one {
-  background: linear-gradient(135deg, #64243a, #913d51);
-}
-
-.slide-two {
-  background: linear-gradient(135deg, #42202d, #76505a);
-}
-
-.slide-three {
-  background: linear-gradient(135deg, #702a40, #a66b62);
-}
-
-.carousel-indicators {
-  margin-bottom: 12px;
-}
-
-.carousel-indicators [data-bs-target] {
-  background-color: var(--gold);
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 8%;
-}
-
-/* 6. KONTAK */
 .contact-section {
-  background: var(--cream);
+    background-color: var(--cream);
 }
 
-.contact-form {
-  background: white;
-  padding: 32px;
-  border: 1px solid #e7dcd1;
-  border-top: 4px solid var(--maroon);
-  box-shadow: 0 8px 25px rgba(66,19,33,0.06);
+.contact-box {
+    background-color: var(--white);
+    padding: 35px;
+    border-top: 5px solid var(--maroon);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
 }
 
-.contact-form .form-label {
-  color: var(--maroon);
-  font-size: 12px;
-  font-weight: 800;
+.form-label {
+    color: var(--maroon);
+    font-weight: bold;
 }
 
-.contact-form .form-control {
-  background: #fffdf9;
-  border: 1px solid #dfd4ca;
-  border-radius: 3px;
-  padding: 12px;
-  font-size: 12px;
+.form-control {
+    padding: 12px;
+    border: 1px solid #d8c9b9;
+    border-radius: 6px;
 }
 
-.contact-form .form-control:focus {
-  border-color: var(--maroon);
-  box-shadow: 0 0 0 0.15rem rgba(100,31,50,0.12);
+.form-control:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 0.2rem rgba(198,155,85,0.2);
 }
 
-.btn-send {
-  background: var(--maroon);
-  color: white;
-  border-radius: 3px;
-  padding: 13px;
-  font-size: 13px;
-  font-weight: 800;
-  transition: 0.3s;
+.contact-section .btn {
+    background-color: var(--maroon);
+    color: var(--white);
+    border: none;
+    padding: 12px 25px;
+    font-weight: bold;
 }
 
-.btn-send:hover {
-  background: var(--maroon-dark);
-  color: var(--gold);
+.contact-section .btn:hover {
+    background-color: var(--maroon-dark);
 }
 
-/* 7. FOOTER */
+/* =====================================
+   FOOTER
+===================================== */
+
 .site-footer {
-  background: var(--maroon-dark);
-  color: white;
-  padding: 25px 0;
-  text-align: center;
-}
-
-.footer-slogan {
-  color: var(--cream);
-  font-family: 'Playfair Display', serif;
-  font-size: 17px;
-  font-weight: 700;
-  margin-bottom: 7px;
-}
-
-.footer-slogan span {
-  color: var(--gold);
-}
-
-.footer-copyright {
-  color: #dfc9c7;
-  font-size: 11px;
-  margin: 0;
-}
-
-/* TABLET */
-@media (max-width: 991.98px) {
-  .navbar-nav {
-    padding-top: 12px;
-  }
-
-  .nav-link {
-    margin-left: 0;
-    padding: 10px 0;
-  }
-
-  .hero-section {
-    padding-top: 125px;
-  }
-
-  .slogan-card {
-    margin: 10px auto 0;
-  }
-}
-
-/* SMARTPHONE */
-@media (max-width: 767.98px) {
-  .section-padding {
-    padding: 55px 0;
-  }
-
-  .hero-section {
-    padding: 115px 0 55px;
+    background-color: var(--maroon-dark);
+    color: var(--white);
     text-align: center;
-  }
+    padding: 35px 15px;
+}
 
-  .hero-text h1 {
-    font-size: 35px;
-  }
+.site-footer h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
 
-  .hero-description {
-    margin: 0 auto;
-    font-size: 13px;
-  }
+.site-footer p {
+    color: #eee4d7;
+    margin-bottom: 5px;
+}
 
-  .hero-buttons {
-    justify-content: center;
-  }
+/* =====================================
+   RESPONSIVE TABLET
+===================================== */
 
-  .slogan-card {
-    min-height: 235px;
-    padding: 22px;
-  }
+@media (max-width: 991px) {
 
-  .slogan-card h2 {
-    font-size: 26px;
-  }
+    .hero-section {
+        text-align: center;
+        padding: 70px 0;
+    }
 
-  .section-title {
-    font-size: 29px;
-  }
+    .hero-section h1 {
+        font-size: 40px;
+    }
 
-  .section-heading {
-    font-size: 24px;
-  }
+    .navbar-collapse {
+        padding-top: 15px;
+    }
 
-  .about-card {
-    min-height: auto;
-    padding: 25px;
-  }
+    .navbar-nav .nav-link {
+        padding: 8px 0;
+    }
+}
 
-  .program-card {
-    min-height: 205px;
-  }
+/* =====================================
+   RESPONSIVE HP
+===================================== */
 
-  .campaign-slide {
-    min-height: 260px;
-    padding: 35px 30px;
-  }
+@media (max-width: 767px) {
 
-  .contact-form {
-    padding: 23px;
-  }
+    section {
+        padding: 60px 0;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 65px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 32px;
+    }
+
+    .hero-section p {
+        font-size: 15px;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
+    .profile-card {
+        padding: 35px 20px;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 280px;
+    }
+
+    .profile-card h2 {
+        font-size: 27px;
+    }
+
+    .profile-card p {
+        font-size: 15px;
+    }
+
+    .vision-box,
+    .mission-box {
+        margin-bottom: 15px;
+    }
+
+    .carousel-item img {
+        height: 250px;
+    }
+
+    .contact-box {
+        padding: 25px 18px;
+    }
   }
