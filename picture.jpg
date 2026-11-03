@@ -1,7 +1,7 @@
 <!-- FOTO PROFIL PERSEGI PANJANG -->
 <div class="profile-photo">
     <img
-        src="data:image/jpeg;base64,IMG-20261103-WA0012.jpg"
+        src="IMG-20261103-WA0012.jpg"
         alt="Foto Anggota Generasi Bersih"
     >
 </div>
