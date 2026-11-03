@@ -1,1 +1,1356 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generasi Bersih | SMK</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   1. GLOBAL STYLE
+========================= */
+
+:root {
+  --maroon: #641e2b;
+  --dark: #351018;
+  --red: #8d3546;
+  --cream: #f8f0e3;
+  --cream2: #eee1ce;
+  --gold: #c8a36a;
+  --white: #fffdf9;
+  --text: #4b3333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+section {
+  scroll-margin-top: 85px;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-label {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  color: var(--dark);
+  font-size: clamp(30px, 5vw, 43px);
+  font-weight: 800;
+}
+
+.section-desc {
+  color: #806d67;
+  max-width: 580px;
+  line-height: 1.8;
+}
+
+/* =========================
+   2. NAVBAR
+========================= */
+
+.navbar {
+  background: var(--dark) !important;
+  padding: 16px 0;
+  box-shadow: 0 4px 20px rgba(30, 5, 10, .15);
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  color: var(--cream) !important;
+  letter-spacing: 1px;
+}
+
+.navbar-brand span {
+  color: var(--gold);
+}
+
+.navbar-nav .nav-link {
+  color: #eadfd5 !important;
+  font-size: 14px;
+  margin-left: 15px;
+  transition: .3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--gold) !important;
+}
+
+.navbar-toggler {
+  border-color: var(--gold);
+}
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(200,163,106,.16), transparent 28%),
+    linear-gradient(130deg, #351018, #641e2b 65%, #8d3546);
+  color: var(--cream);
+  padding: 95px 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  right: -100px;
+  top: -120px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  right: 10%;
+  bottom: -160px;
+}
+
+.hero-small {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 6vw, 68px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  color: #e8d9d0;
+  line-height: 1.9;
+  max-width: 550px;
+  font-size: 16px;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--dark);
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  padding: 13px 27px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.btn-gold:hover {
+  background: var(--cream);
+  color: var(--dark);
+  transform: translateY(-4px);
+}
+
+.btn-outline-cream {
+  border: 1px solid var(--cream);
+  color: var(--cream);
+  border-radius: 30px;
+  padding: 13px 27px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.btn-outline-cream:hover {
+  background: var(--cream);
+  color: var(--dark);
+}
+
+.hero-card {
+  background: var(--cream);
+  color: var(--dark);
+  padding: 35px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0,0,0,.2);
+  transform: rotate(2deg);
+}
+
+.hero-card small {
+  color: var(--red);
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.hero-card h3 {
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+.hero-card p {
+  color: #745b52;
+}
+
+.hero-card .line {
+  width: 60px;
+  height: 4px;
+  background: var(--gold);
+  margin-bottom: 20px;
+}
+
+.hero-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  color: var(--gold);
+  opacity: .8;
+  text-align: right;
+}
+
+/* =========================
+   4. QUOTE / MOTTO
+========================= */
+
+.motto {
+  background: var(--gold);
+  color: var(--dark);
+  padding: 24px 0;
+  text-align: center;
+}
+
+.motto p {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* =========================
+   5. TENTANG KAMI
+========================= */
+
+.about {
+  padding: 100px 0;
+  background: var(--cream);
+}
+
+.about-box {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 35px;
+  height: 100%;
+  box-shadow: 0 10px 35px rgba(65,25,25,.05);
+}
+
+.about-box p {
+  line-height: 1.9;
+  color: #76625a;
+}
+
+.about-highlight {
+  background: var(--maroon);
+  color: var(--cream);
+  border-radius: 20px;
+  padding: 35px;
+  height: 100%;
+}
+
+.about-highlight h3 {
+  color: var(--gold);
+  font-size: 29px;
+  margin-bottom: 18px;
+}
+
+.about-highlight p {
+  line-height: 1.9;
+  color: #eadbd4;
+}
+
+.about-highlight .mini-line {
+  width: 55px;
+  height: 3px;
+  background: var(--gold);
+  margin: 20px 0;
+}
+
+/* =========================
+   6. VISI MISI
+========================= */
+
+.visi-misi {
+  background: var(--cream2);
+  padding: 85px 0;
+}
+
+.vm-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 30px;
+  height: 100%;
+  border-bottom: 4px solid var(--gold);
+  transition: .3s;
+}
+
+.vm-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(65,25,25,.09);
+}
+
+.vm-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0e1d4;
+  color: var(--maroon);
+  font-size: 25px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.vm-card h3 {
+  font-size: 25px;
+  color: var(--maroon);
+}
+
+.vm-card p,
+.vm-card li {
+  color: #76625a;
+  line-height: 1.9;
+}
+
+.vm-card ul {
+  padding-left: 20px;
+}
+
+/* =========================
+   7. PROGRAM KAMI
+========================= */
+
+.program {
+  background: var(--white);
+  padding: 100px 0;
+}
+
+.program-card {
+  background: var(--cream);
+  border: 1px solid #eee2d5;
+  border-radius: 17px;
+  padding: 30px;
+  height: 100%;
+  transition: .35s;
+  position: relative;
+  overflow: hidden;
+}
+
+.program-card:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 18px 35px rgba(65,25,25,.10);
+  border-color: var(--gold);
+}
+
+.program-icon {
+  font-size: 33px;
+  margin-bottom: 20px;
+}
+
+.program-card h3 {
+  color: var(--maroon);
+  font-size: 23px;
+  margin-bottom: 14px;
+}
+
+.program-card p {
+  color: #806d67;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.program-tag {
+  display: inline-block;
+  color: var(--red);
+  background: #eadbd4;
+  border-radius: 20px;
+  padding: 6px 13px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================
+   8. FAKTA / KAMPANYE
+========================= */
+
+.campaign {
+  background: var(--maroon);
+  padding: 85px 0;
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.campaign h2 {
+  font-size: 40px;
+  color: var(--cream);
+}
+
+.campaign p {
+  color: #e7d5cc;
+  line-height: 1.9;
+}
+
+.campaign-item {
+  padding: 20px;
+  border-left: 2px solid var(--gold);
+  margin-bottom: 15px;
+}
+
+.campaign-item h3 {
+  color: var(--gold);
+  font-size: 22px;
+}
+
+.campaign-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* =========================
+   9. GALERI
+========================= */
+
+.gallery {
+  background: var(--cream);
+  padding: 100px 0;
+}
+
+.gallery-card {
+  border-radius: 18px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 35px;
+  color: var(--cream);
+}
+
+.gallery-one {
+  background: linear-gradient(135deg, #641e2b, #a04a57);
+}
+
+.gallery-two {
+  background: linear-gradient(135deg, #493021, #9a704b);
+}
+
+.gallery-three {
+  background: linear-gradient(135deg, #351018, #70404a);
+}
+
+.gallery-card h3 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.gallery-card p {
+  color: #f2e4d9;
+}
+
+.carousel-inner {
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(65,25,25,.12);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+}
+
+.carousel-indicators button {
+  height: 5px !important;
+  border-radius: 10px;
+}
+
+/* =========================
+   10. AJAKAN BERGABUNG
+========================= */
+
+.join {
+  background: var(--cream2);
+  padding: 85px 0;
+  text-align: center;
+}
+
+.join-box {
+  background: var(--white);
+  padding: 50px 25px;
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(65,25,25,.06);
+}
+
+.join-box h2 {
+  font-size: 38px;
+  color: var(--maroon);
+}
+
+.join-box p {
+  color: #806d67;
+  max-width: 600px;
+  margin: 15px auto 25px;
+}
+
+/* =========================
+   11. KONTAK
+========================= */
+
+.contact {
+  background: var(--white);
+  padding: 100px 0;
+}
+
+.contact-info {
+  background: var(--dark);
+  color: var(--cream);
+  border-radius: 18px;
+  padding: 35px;
+  height: 100%;
+}
+
+.contact-info h3 {
+  color: var(--gold);
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: #e8d9d0;
+  line-height: 1.9;
+}
+
+.contact-form {
+  background: var(--cream);
+  border-radius: 18px;
+  padding: 35px;
+  border: 1px solid #eee1d5;
+}
+
+.contact-form label {
+  font-weight: 700;
+  color: var(--maroon);
+  margin-bottom: 8px;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  padding: 12px;
+  border-radius: 9px;
+  border: 1px solid #dfcfc1;
+  background: var(--white);
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  border-color: var(--maroon);
+  box-shadow: 0 0 0 .2rem rgba(100,30,43,.12);
+}
+
+/* =========================
+   12. FOOTER
+========================= */
+
+footer {
+  background: var(--dark);
+  color: var(--cream);
+  padding: 35px 0;
+  text-align: center;
+}
+
+footer h3 {
+  color: var(--gold);
+  font-size: 24px;
+}
+
+footer p {
+  color: #d9c7bd;
+  margin-bottom: 8px;
+}
+
+footer small {
+  color: #a99088;
+}
+
+/* =========================
+   13. RESPONSIVE HP
+========================= */
+
+@media(max-width: 768px) {
+
+  .navbar-nav .nav-link {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .hero {
+    padding: 65px 0;
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-card {
+    margin-top: 20px;
+    transform: none;
+  }
+
+  .hero-card h3 {
+    font-size: 27px;
+  }
+
+  .motto p {
+    font-size: 17px;
+    padding: 0 15px;
+  }
+
+  .about,
+  .program,
+  .gallery,
+  .contact {
+    padding: 65px 0;
+  }
+
+  .visi-misi,
+  .campaign,
+  .join {
+    padding: 65px 0;
+  }
+
+  .campaign h2 {
+    font-size: 32px;
+  }
+
+  .gallery-card {
+    min-height: 260px;
+  }
+
+  .gallery-card h3 {
+    font-size: 25px;
+  }
+
+  .join-box h2 {
+    font-size: 30px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 25px;
+  }
+}
+
+@media(max-width: 400px) {
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .hero-card {
+    padding: 25px;
+  }
+
+  .hero-card h3 {
+    font-size: 24px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     1. NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="#beranda">
+      GENERASI <span>BERSIH.</span>
+    </a>
+
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse" data-bs-target="#menuUtama">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuUtama">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#visi">Visi Misi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- =========================
+     2. HERO
+========================= -->
+
+<header class="hero" id="beranda">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-7">
+        <div class="hero-small">GERAKAN SISWA SMK INDONESIA</div>
+
+        <h1>
+          Bangun Generasi <span>Bersih,</span><br>
+          Wujudkan Masa Depan.
+        </h1>
+
+        <p>
+          Bersama menciptakan lingkungan sekolah yang sehat,
+          bebas narkoba, menjunjung tinggi kejujuran,
+          dan memiliki karakter berintegritas.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#program" class="btn btn-gold">
+            Jelajahi Program →
+          </a>
+
+          <a href="#tentang" class="btn btn-outline-cream">
+            Tentang Kami
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="hero-card">
+
+          <small>OUR PRINCIPLE / 001</small>
+
+          <h3>
+            "Masa Depan Hebat Dimulai dari Pilihan yang Tepat."
+          </h3>
+
+          <div class="line"></div>
+
+          <p>
+            Katakan tidak pada narkoba.
+            Katakan ya pada kejujuran dan prestasi.
+          </p>
+
+          <div class="hero-number">01.</div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<!-- =========================
+     3. MOTTO
+========================= -->
+
+<div class="motto">
+  <div class="container">
+    <p>✦ SAY NO TO DRUGS • SAY YES TO INTEGRITY ✦</p>
+  </div>
+</div>
+
+
+<!-- =========================
+     4. TENTANG KAMI
+========================= -->
+
+<section class="about" id="tentang">
+  <div class="container">
+
+    <div class="row align-items-center g-4">
+
+      <div class="col-lg-6">
+        <div class="section-label">WHO WE ARE</div>
+
+        <h2 class="section-title mt-3 mb-4">
+          Mengenal Generasi Bersih
+        </h2>
+
+        <div class="about-box">
+          <p>
+            Generasi Bersih merupakan gerakan siswa SMK yang
+            memiliki kepedulian terhadap pentingnya lingkungan
+            sekolah yang sehat, aman, dan berintegritas.
+          </p>
+
+          <p>
+            Kami hadir untuk mengajak seluruh siswa agar menjauhi
+            penyalahgunaan narkoba, membiasakan perilaku jujur,
+            serta berani mengambil keputusan yang positif.
+          </p>
+
+          <p class="mb-0">
+            Melalui edukasi, kegiatan kreatif, dan aksi nyata,
+            kami percaya bahwa perubahan besar dimulai dari
+            kebiasaan kecil.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="about-highlight">
+
+          <div class="section-label text-warning">
+            OUR PURPOSE
+          </div>
+
+          <h3>Menjadi Generasi yang Lebih Baik.</h3>
+
+          <div class="mini-line"></div>
+
+          <p>
+            Bukan hanya tentang menghindari hal negatif,
+            tetapi juga tentang membangun keberanian,
+            tanggung jawab, kepedulian, dan kejujuran
+            dalam kehidupan sehari-hari.
+          </p>
+
+          <p class="mb-0">
+            Karena generasi hebat bukan hanya cerdas,
+            tetapi juga memiliki karakter yang kuat.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     5. VISI DAN MISI
+========================= -->
+
+<section class="visi-misi" id="visi">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <div class="section-label">OUR DIRECTION</div>
+      <h2 class="section-title mt-3">Visi & Misi</h2>
+      <p class="section-desc mx-auto">
+        Landasan kami dalam membangun lingkungan sekolah
+        yang sehat dan penuh integritas.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="vm-card">
+          <div class="vm-icon">✦</div>
+
+          <h3>Visi</h3>
+
+          <p>
+            Mewujudkan generasi siswa SMK yang sehat,
+            berprestasi, bebas narkoba, serta menjunjung
+            tinggi nilai kejujuran dan integritas.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="vm-card">
+          <div class="vm-icon">✧</div>
+
+          <h3>Misi</h3>
+
+          <ul>
+            <li>Memberikan edukasi tentang bahaya narkoba.</li>
+            <li>Menanamkan sikap jujur dan bertanggung jawab.</li>
+            <li>Mengembangkan kegiatan positif dan kreatif.</li>
+            <li>Membangun lingkungan sekolah yang aman.</li>
+            <li>Mendorong siswa berani menolak tindakan korupsi.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     6. PROGRAM KAMI
+========================= -->
+
+<section class="program" id="program">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <div class="section-label">WHAT WE DO</div>
+
+      <h2 class="section-title mt-3">
+        Program Unggulan Kami
+      </h2>
+
+      <p class="section-desc mx-auto">
+        Berbagai kegiatan positif untuk membentuk
+        siswa yang sehat, kreatif, dan berintegritas.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="program-card">
+          <div class="program-icon">🚫</div>
+          <h3>Edukasi Anti Narkoba</h3>
+          <p>
+            Memberikan informasi dan pemahaman mengenai
+            bahaya penyalahgunaan narkoba bagi kesehatan
+            serta masa depan generasi muda.
+          </p>
+          <span class="program-tag">ANTI NARKOBA</span>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="program-card">
+          <div class="program-icon">🤝</div>
+          <h3>Konseling Teman Sebaya</h3>
+          <p>
+            Menciptakan ruang saling mendukung,
+            mendengarkan, dan memberikan semangat
+            kepada teman yang membutuhkan.
+          </p>
+          <span class="program-tag">KEPEDULIAN</span>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="program-card">
+          <div class="program-icon">⚽</div>
+          <h3>Olahraga & Seni</h3>
+          <p>
+            Menyalurkan kreativitas dan energi positif
+            melalui olahraga, musik, seni, serta
+            berbagai kegiatan sekolah.
+          </p>
+          <span class="program-tag">HIDUP SEHAT</span>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="program-card">
+          <div class="program-icon">💰</div>
+          <h3>Kantin Kejujuran</h3>
+          <p>
+            Melatih tanggung jawab dan kejujuran siswa
+            melalui kegiatan jual beli yang
+            mengutamakan kepercayaan.
+          </p>
+          <span class="program-tag">INTEGRITAS</span>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="program-card">
+          <div class="program-icon">📚</div>
+          <h3>Budaya Anti Mencontek</h3>
+          <p>
+            Membiasakan siswa mengerjakan tugas
+            secara mandiri, menghargai usaha sendiri,
+            dan menjunjung kejujuran akademik.
+          </p>
+          <span class="program-tag">JUJUR ITU HEBAT</span>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="program-card">
+          <div class="program-icon">📊</div>
+          <h3>Transparansi Dana</h3>
+          <p>
+            Mendorong keterbukaan laporan dana kegiatan
+            siswa agar dapat dipertanggungjawabkan
+            dengan baik.
+          </p>
+          <span class="program-tag">ANTI KORUPSI</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  
+<!-- =========================
+     7. KAMPANYE
+========================= -->
+
+<section class="campaign" id="kampanye">
+  <div class="container">
+
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+        <div class="section-label text-warning">
+          OUR CAMPAIGN
+        </div>
+
+        <h2 class="mt-3 mb-4">
+          Perubahan Besar Dimulai dari Diri Sendiri.
+        </h2>
+
+        <p>
+          Menjadi generasi bersih bukan sekadar slogan.
+          Ini adalah komitmen untuk berani memilih
+          hal yang benar, menjaga diri, dan
+          memberikan pengaruh positif kepada sekitar.
+        </p>
+
+        <a href="#kontak" class="btn btn-gold mt-3">
+          Bergabung Sekarang →
+        </a>
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="campaign-item">
+          <h3>01. Berani Menolak</h3>
+          <p>
+            Menolak narkoba dan segala bentuk ajakan
+            yang merugikan diri sendiri.
+          </p>
+        </div>
+
+        <div class="campaign-item">
+          <h3>02. Berani Jujur</h3>
+          <p>
+            Membiasakan kejujuran dalam belajar
+            maupun kehidupan sehari-hari.
+          </p>
+        </div>
+
+        <div class="campaign-item">
+          <h3>03. Berani Berprestasi</h3>
+          <p>
+            Mengembangkan potensi dan meraih cita-cita
+            melalui cara yang positif.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     8. GALERI KAMPANYE
+========================= -->
+
+<section class="gallery" id="galeri">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <div class="section-label">OUR MOMENTS</div>
+      <h2 class="section-title mt-3">Galeri Kampanye</h2>
+      <p class="section-desc mx-auto">
+        Pesan dan semangat kami untuk membangun
+        generasi yang lebih baik.
+      </p>
+    </div>
+
+    <div id="carouselGaleri" class="carousel slide"
+      data-bs-ride="carousel">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselGaleri"
+          data-bs-slide-to="0" class="active"></button>
+
+        <button type="button" data-bs-target="#carouselGaleri"
+          data-bs-slide-to="1"></button>
+
+        <button type="button" data-bs-target="#carouselGaleri"
+          data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="gallery-card gallery-one">
+            <div>
+              <h3>Hidup Sehat, Masa Depan Hebat.</h3>
+              <p>Jauhi narkoba, raih prestasi tanpa batas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="gallery-card gallery-two">
+            <div>
+              <h3>Jujur Dimulai dari Aku.</h3>
+              <p>Integritas adalah identitas generasi hebat.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="gallery-card gallery-three">
+            <div>
+              <h3>Prestasi Tanpa Korupsi.</h3>
+              <p>Bersih dalam tindakan, hebat dalam pencapaian.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button"
+        data-bs-target="#carouselGaleri" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button"
+        data-bs-target="#carouselGaleri" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     9. AJAKAN BERGABUNG
+========================= -->
+
+<section class="join">
+  <div class="container">
+
+    <div class="join-box">
+      <div class="section-label">BE PART OF THE CHANGE</div>
+
+      <h2 class="mt-3">
+        Jadilah Bagian dari Generasi Bersih!
+      </h2>
+
+      <p>
+        Mari bersama-sama menciptakan lingkungan
+        sekolah yang sehat, jujur, dan bebas narkoba.
+        Masa depan yang lebih baik dimulai dari kita.
+      </p>
+
+      <a href="#kontak" class="btn btn-gold">
+        Saya Siap Bergabung →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================
+     10. KONTAK
+========================= -->
+
+<section class="contact" id="kontak">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <div class="section-label">GET IN TOUCH</div>
+
+      <h2 class="section-title mt-3">
+        Hubungi & Bergabung
+      </h2>
+
+      <p class="section-desc mx-auto">
+        Punya ide atau ingin ikut berpartisipasi?
+        Sampaikan pesanmu kepada kami.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-5">
+        <div class="contact-info">
+
+          <h3>Mari Bergerak Bersama.</h3>
+
+          <p>
+            Setiap perubahan membutuhkan keberanian
+            dan kerja sama. Mari jadikan sekolah
+            sebagai tempat yang aman, sehat,
+            dan penuh kejujuran.
+          </p>
+
+          <hr style="border-color:#c8a36a">
+
+          <p>
+            <strong>✦ Gerakan:</strong><br>
+            Generasi Bersih SMK
+          </p>
+
+          <p>
+            <strong>✦ Fokus:</strong><br>
+            Anti Narkoba & Integritas
+          </p>
+
+          <p class="mb-0">
+            <strong>✦ Slogan:</strong><br>
+            Jujur Itu Hebat!
+          </p>
+
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+
+        <form class="contact-form"
+          onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda berhasil dikirim.');">
+
+          <div class="row g-3">
+
+            <div class="col-md-6">
+              <label for="nama" class="form-label">
+                Nama Lengkap
+              </label>
+
+              <input type="text" class="form-control"
+                id="nama" placeholder="Masukkan nama" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="email" class="form-label">
+                Email
+              </label>
+
+              <input type="email" class="form-control"
+                id="email" placeholder="nama@email.com" required>
+            </div>
+
+            <div class="col-12">
+              <label for="minat" class="form-label">
+                Program yang diminati
+              </label>
+
+              <select class="form-select" id="minat">
+                <option>Kampanye Anti Narkoba</option>
+                <option>Kampanye Integritas</option>
+                <option>Olahraga dan Seni</option>
+                <option>Keduanya</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label for="pesan" class="form-label">
+                Pesan
+              </label>
+
+              <textarea class="form-control" id="pesan"
+                rows="4" placeholder="Tuliskan pesanmu..."></textarea>
+            </div>
+
+            <div class="col-12 d-grid">
+              <button type="submit" class="btn btn-gold">
+                Kirim Pesan →
+              </button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     11. FOOTER
+========================= -->
+
+<footer>
+  <div class="container">
+
+    <h3>GENERASI BERSIH.</h3>
+
+    <p>
+      Say No to Drugs, Say Yes to Dreams!
+    </p>
+
+    <p>
+      Jujur Dimulai dari Aku, Bersih Dimulai dari Kita.
+    </p>
+
+    <hr style="border-color:#76515a">
+
+    <small>
+      © 2026 Generasi Bersih SMK. Seluruh hak dilindungi.
+    </small>
+
+  </div>
+</footer>
+
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+    </html>
+
+  
