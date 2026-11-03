@@ -1,0 +1,34 @@
+<!-- FOTO PROFIL PERSEGI PANJANG -->
+<div class="profile-photo">
+    <img
+        src="data:image/jpeg;base64,IMG-20261103-WA0012.jpg"
+        alt="Foto Anggota Generasi Bersih"
+    >
+</div>
+
+<style>
+.profile-photo {
+    width: 220px;
+    height: 300px;
+    margin: 25px auto;
+    overflow: hidden;
+    border: 5px solid #c69b55;
+    border-radius: 0;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 0;
+}
+
+@media (max-width: 767px) {
+    .profile-photo {
+        width: 200px;
+        height: 280px;
+    }
+}
+</style>
